@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    min-height: 100%;
+}
+
+body {
+    background-image: url("OIC_BG.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    height: 250px;
+    background-position: top;
+}
+
+footer {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    height: 250px;
+    background-position: bottom;
+}
+
+.mainMenu {
+    background-color: rgb(221, 172, 37);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(38, 57, 179);
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+.container {
+    display: flex;
+    gap: 2px;
+}
+
+.sections {
+    flex: 1;
+    background-color: rgb(200, 212, 27);
+    box-sizing: border-box;
+    
+    height: 300px;
+}
+
+#left_p {
+    font-size: 30px;
+}
+
+#left_a {
+    font-size: 25px;
+}
+
+#tr_dp {
+    font-size: 20px;
+}
