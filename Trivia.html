@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--=========================================================
+                            HEADER
+==========================================================-->
+
+    <header>
+
+        <div class="logo">
+            KHABIROV UMARJON PROJECT WORK
+        </div>
+
+        <nav>
+
+            <a href="AboutMe.html">Home</a>
+
+            <a href="Portfolio.html">Portfolio</a>
+
+            <a href="index.html">Main Menu</a>
+
+        </nav>
+
+    </header>
+
+<!--=========================================================
+                    TRIVIA PAGE
+==========================================================-->
+
+<main class="triviaPage">
+
+<!-- Background glow / decorative elements -->
+<div class="triviaBackground">
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+</div>
+
+
+<!--======================================================
+                    PAGE TITLE
+======================================================-->
+
+<section class="triviaHeader">
+
+    <p class="smallTitle">
+        TECH TRIVIA CHALLENGE
+    </p>
+
+    <h1>
+        Test Your Web Development Knowledge
+    </h1>
+
+    <p class="triviaDescription">
+        Answer 5 interactive questions about HTML, CSS,
+        JavaScript, and software development fundamentals.
+    </p>
+
+</section>
+
+
+
+<!--======================================================
+                    QUIZ CARD
+======================================================-->
+
+<section class="quizSection">
+
+    <div class="quizCard">
+
+
+        <!--==================================================
+                    QUIZ TOP BAR
+        ==================================================-->
+
+        <div class="quizTopBar">
+
+            <div class="questionCounter">
+                Question <span id="currentQuestion">1</span> of 5
+            </div>
+
+            <div class="scoreDisplay">
+                Score: <span id="score">0</span>
+            </div>
+
+        </div>
+
+
+        <!--==================================================
+                    PROGRESS BAR
+        ==================================================-->
+
+        <div class="progressContainer">
+
+            <div class="progressBar" id="progressBar"></div>
+
+        </div>
+
+
+
+<!--======================================================
+                SLIDING VIEWPORT
+=======================================================-->
+
+<div class="questionViewport" id="questionViewport">
+
+<!--==================================================
+                QUESTION SLIDE
+==================================================-->
+
+<div class="questionSlide active" id="questionSlide">
+
+
+    <!-- Question category -->
+
+    <div class="questionCategory" id="questionCategory">
+
+        HTML Fundamentals
+
+    </div>
+
+
+    <!-- Question text -->
+
+    <h2 class="questionText" id="questionText">
+
+        What does HTML primarily control in a webpage?
+
+    </h2>
+
+
+    <!--==================================================
+                        ANSWERS
+    ==================================================-->
+
+    <div class="answersContainer" id="answersContainer">
+
+        <button class="answerButton" data-index="0">
+
+            <span class="answerLetter">A</span>
+
+            <span class="answerContent">
+
+                Page structure and content
+
+            </span>
+
+        </button>
+
+
+        <button class="answerButton" data-index="1">
+
+            <span class="answerLetter">B</span>
+
+            <span class="answerContent">
+
+                Database connections
+
+            </span>
+
+        </button>
+
+
+        <button class="answerButton" data-index="2">
+
+            <span class="answerLetter">C</span>
+
+            <span class="answerContent">
+
+                Server operating systems
+
+            </span>
+
+        </button>
+
+
+        <button class="answerButton" data-index="3">
+
+            <span class="answerLetter">D</span>
+
+            <span class="answerContent">
+
+                Internet speed optimization
+
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- Feedback -->
+
+    <div class="feedbackMessage" id="feedbackMessage"></div>
+
+
+    <!-- Actions -->
+
+    <div class="questionActions">
+
+        <button id="nextButton" class="nextButton">
+
+            Next Question
+
+            <span class="arrow">→</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!--==================================================
+                RESULT SLIDE
+==================================================-->
+
+<!-- Hidden at the beginning -->
+
+<div class="questionSlide resultSlide hidden" id="resultSlide">
+
+
+    <div class="resultIcon">
+
+        🏆
+
+    </div>
+
+
+    <p class="smallTitle">
+
+        QUIZ COMPLETE
+
+    </p>
+
+
+    <h2 class="resultTitle">
+
+        Your Final Score
+
+    </h2>
+
+
+    <div class="finalScore">
+
+        <span id="finalScore">0</span>/5
+
+    </div>
+
+
+    <p class="resultMessage" id="resultMessage">
+
+        Great job! You have a strong understanding of
+        web development fundamentals.
+
+    </p>
+
+
+    <div class="resultStats">
+
+        <div class="stat">
+
+            <span class="statNumber" id="correctCount">0</span>
+
+            <span class="statLabel">Correct</span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span class="statNumber">5</span>
+
+            <span class="statLabel">Total</span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span class="statNumber" id="percentage">0%</span>
+
+            <span class="statLabel">Accuracy</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="resultActions">
+
+        <button id="restartButton" class="button">
+            Play Again
+        </button>
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<!--======================================================
+                OPTIONAL FACT PANEL
+======================================================-->
+
+<section class="triviaFactPanel">
+
+    <div class="factCard">
+
+        <div class="factIcon">
+            💡
+        </div>
+
+        <div>
+
+            <h3>Did You Know?</h3>
+
+            <p id="factText">
+
+                JavaScript was created in just 10 days in 1995,
+                yet it became one of the most widely used
+                programming languages in the world.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+    <!--=========================================================
+                            FOOTER
+    ==========================================================-->
+
+    <footer>
+
+        <p>
+            © 2026 Khabirov Umarjon Abdufarrukhovich
+        </p>
+
+        <div>
+
+            <a target="_blank"
+            href="https://www.linkedin.com/feed/">
+                LinkedIn
+            </a>
+
+            <a target="_blank"
+            href="https://github.com">
+                GitHub
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
